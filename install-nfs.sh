@@ -25,3 +25,6 @@ exportfs -r
 
 #检查配置是否生效
 exportfs
+
+
+showmount -e 172.16.16.249

@@ -23,6 +23,6 @@ do
     status=$(kubectl get po -A | grep ks-installer | awk '{print $4}')
         printf "."
 done
-printf "/n"
+printf "\n"
 
 kubectl logs -n kubesphere-system $(kubectl get pod -n kubesphere-system -l app=ks-install -o jsonpath='{.items[0].metadata.name}') -f
