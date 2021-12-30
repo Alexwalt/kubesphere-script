@@ -1,7 +1,7 @@
 #!/bin/bash
 
 status=$(kubectl get po -A | grep metrics | awk '{print $4}')
-if [ $status == "Running" ]
+if [[ $status == "Running" ]]
 then
     echo "跳过安装，metrics server 已经安装并运行"
     exit 0
@@ -18,4 +18,4 @@ do
     status=$(kubectl get po -A | grep metrics | awk '{print $4}')
     printf "."
 done
-printf "/n"
+printf "\n"
